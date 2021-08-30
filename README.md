@@ -6,12 +6,15 @@ Simple steps to run on your local.
 
 ## 1. Pull this repository.
 In Terminal, go to your selected folder for the project an run
-git clone <this repository URL>
+
+	git clone https://github.com/amancoronel/cms-api-ts.git
 
 ##2. Install node modules.
 
 	npm install
 	
 ##3. Run to your local using
-npm run start -> build
-npm run dev -> to make ts mode run make sure to have "ts-node" in your machine
+
+	npm run start -> for js
+
+	npm run dev -> to make ts mode run make sure to have "ts-node" in your machine
