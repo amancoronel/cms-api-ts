@@ -29,10 +29,10 @@ const LoginRoute = (router) => {
             const user = yield userDetail_controller_1.default.getSingleUserDetails(username);
             if (!user)
                 throw new Error();
-            const result = yield coder_1.decode({ inputPassword: password, hashPassword: user.password });
+            const result = yield (0, coder_1.decode)({ inputPassword: password, hashPassword: user.password });
             if (!result)
                 throw new Error();
-            const token = yield coder_1.signJwtToken({ username });
+            const token = yield (0, coder_1.signJwtToken)({ username });
             const user_data = user;
             user_data.password = null;
             req.session.user = user_data;

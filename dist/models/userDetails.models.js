@@ -12,4 +12,4 @@ const UserSchema = new mongoose_1.Schema({
     password: { type: String },
     role: { type: Number }
 });
-exports.default = mongoose_1.model('user_details', UserSchema);
+exports.default = (0, mongoose_1.model)('user_details', UserSchema);

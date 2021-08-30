@@ -6,4 +6,4 @@ const SkillSchema = new mongoose_1.Schema({
     logo: { type: String },
     status: { type: Boolean, required: true, default: true }
 });
-exports.default = mongoose_1.model("skills", SkillSchema);
+exports.default = (0, mongoose_1.model)("skills", SkillSchema);

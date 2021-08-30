@@ -6,4 +6,4 @@ const SiteSchema = new mongoose_1.Schema({
     link: { type: String },
     status: { type: Boolean, default: true }
 });
-exports.default = mongoose_1.model("sites", SiteSchema);
+exports.default = (0, mongoose_1.model)("sites", SiteSchema);

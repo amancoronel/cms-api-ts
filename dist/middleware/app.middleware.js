@@ -14,13 +14,13 @@ const NAMESPACE = "MIDDLEWARE";
 const Middleware = (app) => {
     app.use(express_1.default.json());
     app.use(express_1.default.urlencoded({ extended: true }));
-    app.use(cors_1.default({
+    app.use((0, cors_1.default)({
         origin: ["*"],
         methods: ["GET", "PUT", "POST", "DELETE"],
         credentials: true
     }));
-    app.use(cookie_parser_1.default());
-    app.use(express_session_1.default({
+    app.use((0, cookie_parser_1.default)());
+    app.use((0, express_session_1.default)({
         genid: (req) => "userId",
         secret: config_1.default.SESSION_SECRET,
         resave: false,
@@ -31,9 +31,9 @@ const Middleware = (app) => {
     }));
     //Middleware that will log all request
     app.use((req, res, next) => {
-        logger_1.default(NAMESPACE, `METHOD - [${req.method}], URL - [${req.url}], IP - [${req.socket.remoteAddress}]`, 'INFO');
+        (0, logger_1.default)(NAMESPACE, `METHOD - [${req.method}], URL - [${req.url}], IP - [${req.socket.remoteAddress}]`, 'INFO');
         res.on("finish", () => {
-            logger_1.default(NAMESPACE, `METHOD - [${req.method}], URL - [${req.url}], IP - [${req.socket.remoteAddress}], STATUS - [${res.statusCode}]`, "INFO");
+            (0, logger_1.default)(NAMESPACE, `METHOD - [${req.method}], URL - [${req.url}], IP - [${req.socket.remoteAddress}], STATUS - [${res.statusCode}]`, "INFO");
         });
         next();
     });

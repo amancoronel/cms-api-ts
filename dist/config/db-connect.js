@@ -11,10 +11,10 @@ const dbConnection = () => {
     mongoose_1.default
         .connect(_1.default.MONGO_URI, _1.default.MONGO_OPTIONS)
         .then(result => {
-        logger_1.default(NAMESPACE, `Database connected`, "INFO");
+        (0, logger_1.default)(NAMESPACE, `Database connected`, "INFO");
     })
         .catch(result => {
-        logger_1.default(NAMESPACE, `Database disconnect`, "ERROR", result);
+        (0, logger_1.default)(NAMESPACE, `Database disconnect`, "ERROR", result);
     });
 };
 exports.default = dbConnection;

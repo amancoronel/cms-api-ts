@@ -7,4 +7,4 @@ const ProjectSchema = new mongoose_1.Schema({
     techStack: { type: String, required: true },
     status: { type: Boolean, required: true, default: true }
 });
-exports.default = mongoose_1.model("projects", ProjectSchema);
+exports.default = (0, mongoose_1.model)("projects", ProjectSchema);

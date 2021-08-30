@@ -8,4 +8,4 @@ const ExperienceSchema = new mongoose_1.Schema({
     year_ended: { type: String, required: true },
     status: { type: Boolean, default: true }
 });
-exports.default = mongoose_1.model("experiences", ExperienceSchema);
+exports.default = (0, mongoose_1.model)("experiences", ExperienceSchema);
