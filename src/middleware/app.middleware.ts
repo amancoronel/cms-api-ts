@@ -12,7 +12,7 @@ const Middleware = (app: Express) => {
     app.use(express.json());
     app.use(express.urlencoded({extended: true}))
     app.use(cors({
-        origin: ["http://localhost:3000", "http://localhost:3001"],
+        origin: ["*"],
         methods: ["GET", "PUT", "POST", "DELETE"],
         credentials: true
     }))
@@ -29,6 +29,7 @@ const Middleware = (app: Express) => {
 
     //Middleware that will log all request
     app.use((req:Request, res:Response, next:NextFunction) => {
+        console.log("*** req", req);
         log(NAMESPACE, `METHOD - [${req.method}], URL - [${req.url}], IP - [${req.socket.remoteAddress}]`, 'INFO')
 
         res.on("finish", () => {
