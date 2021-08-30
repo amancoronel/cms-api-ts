@@ -29,7 +29,6 @@ const Middleware = (app: Express) => {
 
     //Middleware that will log all request
     app.use((req:Request, res:Response, next:NextFunction) => {
-        console.log("*** req", req);
         log(NAMESPACE, `METHOD - [${req.method}], URL - [${req.url}], IP - [${req.socket.remoteAddress}]`, 'INFO')
 
         res.on("finish", () => {
