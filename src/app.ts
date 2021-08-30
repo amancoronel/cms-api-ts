@@ -13,5 +13,5 @@ dbConnection();
 Middleware(app);
 
 app.listen(config.SERVER_PORT, () => {
-    log(NAMESPACE, `SERVER Running on [${config.SERVER_HOSTNAME}:${config.SERVER_PORT}]`, "INFO");
+    log(NAMESPACE, `SERVER Running on PORT [${config.SERVER_PORT}]`, "INFO");
 });

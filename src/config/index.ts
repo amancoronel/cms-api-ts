@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const SERVER_PORT = process.env.PORT || 6969;
-const SERVER_HOSTNAME = process.env.HOSTNAME || 'localhost';
 
 const MONGO_URI = 'mongodb+srv://cmsApiTracker:cmsApiTracker@cluster0.2xp2q.mongodb.net/portfolio';
 const MONGO_OPTIONS = {
@@ -22,7 +21,6 @@ const TOKEN_SECRET = "SECRETTOKENCODE"
 
 export default {
     SERVER_PORT,
-    SERVER_HOSTNAME,
     MONGO_URI,
     MONGO_OPTIONS,
     SALT_ROUND,

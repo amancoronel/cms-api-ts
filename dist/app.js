@@ -13,5 +13,5 @@ const NAMESPACE = "SERVER";
 (0, db_connect_1.default)();
 (0, app_middleware_1.default)(app);
 app.listen(config_1.default.SERVER_PORT, () => {
-    (0, logger_1.default)(NAMESPACE, `SERVER Running on [${config_1.default.SERVER_HOSTNAME}:${config_1.default.SERVER_PORT}]`, "INFO");
+    (0, logger_1.default)(NAMESPACE, `SERVER Running on PORT [${config_1.default.SERVER_PORT}]`, "INFO");
 });

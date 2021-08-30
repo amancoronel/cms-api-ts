@@ -6,7 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const SERVER_PORT = process.env.PORT || 6969;
-const SERVER_HOSTNAME = process.env.HOSTNAME || 'localhost';
 const MONGO_URI = 'mongodb+srv://cmsApiTracker:cmsApiTracker@cluster0.2xp2q.mongodb.net/portfolio';
 const MONGO_OPTIONS = {
     useUnifiedTopology: true,
@@ -21,7 +20,6 @@ const SESSION_SECRET = "SECRETCODE";
 const TOKEN_SECRET = "SECRETTOKENCODE";
 exports.default = {
     SERVER_PORT,
-    SERVER_HOSTNAME,
     MONGO_URI,
     MONGO_OPTIONS,
     SALT_ROUND,
