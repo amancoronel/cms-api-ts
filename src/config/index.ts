@@ -6,7 +6,7 @@ dotenv.config();
 const SERVER_PORT = process.env.SERVER_PORT || 6969;
 const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME || 'localhost';
 
-const MONGO_URI = 'mongodb://localhost/portfolio';
+const MONGO_URI = 'mongodb+srv://cmsApiTracker:cmsApiTracker@cluster0.2xp2q.mongodb.net/portfolio';
 const MONGO_OPTIONS = {
     useUnifiedTopology: true,
     useNewUrlParser: true,
