@@ -15,7 +15,7 @@ const Middleware = (app) => {
     app.use(express_1.default.json());
     app.use(express_1.default.urlencoded({ extended: true }));
     app.use(cors_1.default({
-        origin: ["http://localhost:3000", "http://localhost:3001"],
+        origin: ["*"],
         methods: ["GET", "PUT", "POST", "DELETE"],
         credentials: true
     }));
